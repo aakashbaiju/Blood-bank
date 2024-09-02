@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="db.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='db.css') }}">
+    <title>Blood Bank System</title>
+</head>
+<body>
+    <header>
+        <h1>Blood Bank System</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Donors</a></li>
+                <li><a href="#">Inventory</a></li>
+                <li><a href="#">Appointments</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Welcome to Our Blood Bank</h2>
+        <p>Help save lives by donating blood. Your contribution can make a difference.</p>
+        <button class="abc"><a href="patient.html">Login as patient</button></a>
+        <button class="abc"><a href="db1.html">Login as donor</button></a>
+    </section>
+
+    <section class="features">
+        <div class="feature">
+            <h3>Find a Donor</h3>
+            <p>Search for donors based on blood type and location.</p>
+        </div>
+        <div class="feature">
+            <h3>Inventory Status</h3>
+            <p>Check the current status of our blood inventory.</p>
+        </div>
+        <div class="feature">
+            <h3>Schedule an Appointment</h3>
+            <p>Book an appointment to donate blood at your convenience.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Blood Bank System. All rights reserved.</p>
+    </footer>
+</body>
+</html>

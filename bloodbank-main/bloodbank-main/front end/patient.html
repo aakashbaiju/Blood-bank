@@ -1,0 +1,69 @@
+<!-- Inside patient.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="patient.css">
+    <title>Patient Page</title>
+</head>
+
+<body>
+    <div class="loginbox">
+        <img src="logo.png" class="avatar">
+        <br><br>
+        <h1>Login Here</h1>
+
+        <form action="{{ url_for('patient') }}" method="post">
+            <!-- Your existing form code -->
+
+            {% if blood_availability %}
+            <div class="message">
+                <p>Blood Availability Details:</p>
+                <table>
+                    <tr>
+                        <th>Donor ID</th>
+                        <th>Blood Type</th>
+                        <th>Amount</th>
+                        <th>Expiry Date</th>
+                    </tr>
+                    {% for row in blood_availability %}
+                    <tr>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] }}</td>
+                        <td>{{ row[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+
+            {% if donors %}
+            <div class="message">
+                <p>Donors with Required Blood Type:</p>
+                <table>
+                    <tr>
+                        <th>Donor ID</th>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Phone</th>
+                    </tr>
+                    {% for donor in donors %}
+                    <tr>
+                        <td>{{ donor[0] }}</td>
+                        <td>{{ donor[1] }}</td>
+                        <td>{{ donor[2] }}</td>
+                        <td>{{ donor[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            {% endif %}
+        </form>
+    </div>
+</body>
+
+</html>

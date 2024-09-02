@@ -1,0 +1,82 @@
+
+body{
+margin:0;
+padding: 0;
+background: url(blood.jpg);
+background-size: cover;
+background-position: center;
+font-family: sans-serif;
+}
+
+.loginbox {
+width:350px;
+height: 510px;
+background: #0c0000;
+color: #ebe6e6; 
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50%,-50%);
+box-sizing: border-box;
+padding: 70px 30px;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position:absolute;
+    top:-50px;
+    left: calc(40%);
+}
+h1{
+    margin:0;
+    padding:0 0 20px;
+    text-align:center;
+    font-size: 30px;
+}
+.loginbox p{
+    margin-right: 0;
+    padding-left:40px;
+    font-weight: bold;
+}
+.loginbox input{
+    width: 300px;
+    margin-bottom: 30px;
+    
+}
+.loginbox input[type="text"],input[type="password"]
+{
+    border:none;
+    border-bottom:px solid #fff;
+    background: transparent;
+    outline:none;
+    height:30px;
+    color:#fff;
+    font-size:16px;
+    width:220px;
+    margin-left:30px;
+
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline:none;
+    height: 30px;
+    background: #fb2525;
+    color:#fff;
+    font-size: 18px;
+    border-radius:20px;
+
+}
+.loginbox input[type]
+{
+    cursor:pointer;
+    background:white;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 15px;
+    color:darkgray;
+}
